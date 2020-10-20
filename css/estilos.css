@@ -1,0 +1,125 @@
+html {
+    scroll-behavior: smooth;
+}
+
+nav{
+    position: absolute;
+    z-index: 1;
+    padding: 5px 5px;
+  
+}
+
+/*--Botones Iniciar sesión y Contacto*/
+.topbar {
+    color: #fff;
+    font-size: 10px;
+}
+
+.topbar ul {
+    display: flex;
+   /*align-items: flex-end;*/
+    justify-content: end;
+    margin-top: 8px;
+}
+
+.topbar ul li{ 
+    width:50%;
+    margin:0px 20px;
+}
+/*--------------------------------------*/
+
+
+/*---Estilos para los botones del header---*/
+.btn{
+    color:#ffff;
+   background-color: #be1829dc;
+  /* background-color:#6ed8f560;*/
+    /*border-color: #f3281a;*/
+}
+
+.btn:hover{  
+    background-color: #f3281ad7;
+}
+
+/*---------------------------------------*/
+
+
+.header ul{
+    font-family: Verdana;
+   /* text-align: center;*/
+}
+
+
+#header img{
+    width: 80px;
+}
+.ancla:before{
+    display: block;
+    content: " ";
+    margin-top: -60px;
+    height: 60px;
+}
+.ancla{
+    position: absolute;
+    z-index: 1;  
+    top: 0;
+    bottom: 20;
+    left: 0;
+    right: 0;
+    font-size: 49px;
+    color:#fff;
+}
+#portada img{
+     max-width: 100%;
+     background-repeat: no-repeat;
+
+}
+
+ 
+
+body>header>.navbar {
+    background-color: rgba(0, 0, 0, 0.11);
+    text-shadow: 0 0 20px rgba(36,31,32,.9);
+    border: none;
+    transition: 1s !important;
+    padding-top: 0;
+}
+
+
+
+/*Efecto hover en la barra de menú*/
+nav ul li :hover{
+  background-color: #f3281a;
+
+}
+
+nav ul li a{
+  
+   /*color: #fff; */ 
+   color: rgba(19, 17, 17, 0.884);
+    text-decoration: none;
+   padding: 20px;
+}
+
+
+.navbar-dark .navbar-nav .nav-link{
+    /*color:#c70318;*/
+    color:#fff;
+    text-decoration: none;
+    margin-top:5px;
+   padding: 3px 5px;
+}
+
+.nav-item{
+  margin-left: 25px;
+  font-size: 22px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.sumate{
+    margin-top: 40%;
+    margin-bottom: 15%;
+    text-align: center;
+    font-weight: bold;
+}
