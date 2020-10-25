@@ -17,7 +17,7 @@ let mensaje2= document.getElementById('warning2');
 
 
 
-//Validaciones
+//function registrar(event){
     form.addEventListener("submit",e=>{
     
     e.preventDefault(); //evita que se recargue el formulario sin antes guardar la info
@@ -31,14 +31,14 @@ let mensaje2= document.getElementById('warning2');
     mensaje1.innerHTML="";
     mensaje2.innerHTML="";
 
- //Si el nombre tiene menos de cinco letras
     if(nombre.value.length<5){
+      // warnings +=`Nombre no válido`;
       warning1=`Nombre no válido`;
        entrar=true;
     }
-
- //Si el email no tiene el formato correcto
+    
     if(!regexEmail.test(email.value)){
+       // warnings +=`Email no válido`;
        warning2 =`Email no válido`;
         entrar=true;
     }
@@ -50,15 +50,44 @@ let mensaje2= document.getElementById('warning2');
       else{
     
     let solicitante = new Persona(nombre.value, email.value);
+    console.log(persona);
 
-    //Inicializamos los campos
-    nombre.value="";
-    email.value="";
+   
 
-    //Se guarda la información de la persona en el localStorage
     persona.push(solicitante);
     localStorage.setItem('personas',JSON.stringify(persona))
      
-    mensaje.innerHTML="Enviado"
+    mensaje.innerHTML="Se ha suscripto exitosamente"
+    enviarMail(email.value);
+
+     //Inicializamos los campos
+    nombre.value="";
+    email.value="";
       }
-})
+}
+)
+
+//Función para enviar mails a los suscriptos
+
+function enviarMail(correo){
+
+  Email.send({
+      Host : "smtp.elasticemail.com",
+      Username : "danielaescandar@gmail.com",
+      Password : "5C2419E12E9B3C4F52A91228C16121E661EB",
+      To : `${correo}`,//  para quién va dirigido
+      From : "danielaescandar@gmail.com",
+      Subject : "Gracias por suscribirse!",
+      Body : "Bienvenido a la familia de BLOOD PLUS! Ahora tendrás la información que necesitas para ser donante voluntario de sangre o difundir campañas solidarias",
+  
+      Attachments : [
+          {
+              name : "8033054881552118965298cc897838b5.jpg",
+              path : "https://i.pinimg.com/originals/80/33/05/8033054881552118965298cc897838b5.jpg"
+          }]
+  
+  
+  }).then(
+    message => alert(message)
+  );
+  }
