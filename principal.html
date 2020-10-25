@@ -1,120 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Fontawesome-->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
-     <!-- Bootstrap CSS -->
-     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="shortcut icon" href="images/logogota.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/estilos.css">
-    
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="shortcut icon" href="images/logogota.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/estilos.css" />
+
     <title>Blood Plus</title>
-</head>
+  </head>
 
-<body data-spy="scroll" data-target="#navbarNav" data-offset="100">
+  <body data-spy="scroll" data-target="#navbarNav" data-offset="100">
+    <!--------Botón para subir al menú------>
+    <i style="font-size: 24px" class="fas" onclick="topFunction()" id="myBtn"
+      >&#xf35b;</i
+    >
 
-    <!-----------------Header--------------->
-    <header class="sticky-top ">
-      <nav id="header" class="navbar navbar-expand-lg navbar-dark nav flex-column">
-        
+    <!-----------------Header------------->
+    <header>
+      <div class="fixed-top">
         <!-- Botones de Login y Contacto-->
-       <div class="topbar">
-            <div class="container ">
-             
-                     <div class="menu-topbar-container">
-                       <ul id="menu-de-topbar" class="menu">
-                           <li id="menu-login" class="my-2 my-lg-0">
-                         
-                         <button class="btn btn-login" data-toggle="modal" data-target="#Login">Login</button>
-                             
-                           </li>
-                           <li id="menu-contacto"class="my-2 my-lg-0">
-                                <button class="btn btn-contacto" data-toggle="modal" data-target="#Contacto">Contacto</button>
-                           </li>
-
-                       </ul>
-                     </div>
-            </div>
+        <div class="sesiones">
+          <ul class="ml-auto">
+            <li>
+              <button
+                class="btn btn-login"
+                data-toggle="modal"
+                data-target="#Login"
+              >
+                Login
+              </button>
+            </li>
+            <li id="menu-contacto">
+              <button
+                class="btn btn-contacto"
+                data-toggle="modal"
+                data-target="#Contacto"
+              >
+                Contacto
+              </button>
+            </li>
+          </ul>
         </div>
-         <!--Menú del nav-->
-        
-         <div  class="container ">
+        <nav id="header" class="navbar navbar-expand-lg navbar-dark">
+          <!------Menú del nav------->
+
+          <div class="container">
             <a class="navbar-brand" href="#">
-                 <img src="images/logogota.png" alt="logo de gota"/>BLOOD PLUS
-             </a>
-             
-              <!--Menú Hamburguesa-->
-             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-             <span class="navbar-toggler-icon"></span>
-             </button>
-              <!--Fin de Menú Hamburguesa-->
-              
-             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                
-                    <li class="nav-item ">
-                      <a class="nav-link" href="#">Inicio </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Por qué donar</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Quiero ser donante</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Dónde donar</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Infórmate</a>
-                  </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-resaltado" data-toggle="modal" href="#" data-target="#">Avisos</a>
-                    </li>
+              <img src="images/logogota.png" alt="logo de gota" />BLOOD PLUS
+            </a>
 
-                   
-                </ul>
-                
-              </div>
+            <!--Menú Hamburguesa-->
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <!--Fin de Menú Hamburguesa-->
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="#main">Inicio </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Por qué donar</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Quiero ser donante</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Dónde donar</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Infórmate</a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-resaltado"
+                    data-toggle="modal"
+                    href="#"
+                    data-target="#"
+                    >Avisos</a
+                  >
+                </li>
+              </ul>
             </div>
-      </nav>
-
-      
-       
+          </div>
+        </nav>
+      </div>
     </header>
     <!------------------Fin del Header---------------->
-   
+
     <!----------------MAIN---------------->
-    <main id="main" class="ancla">
-      <section id="portada" class="ancla">
+    <main>
+      <section id="portada">
         <div class="container-fluid">
-            <div class="row">
-              <div class=" d-block w-100">
-                <img src="Images/ManosConCorazon.jpg" alt="">
-              </div>
+          <div class="row">
+            <div class="d-block">
+              <img
+                src="Images/ManosConCorazon.jpg"
+                alt="imagen de portada"
+                width="100%"
+              />
             </div>
+            <div class="overlay">
+              <div id="sumate" class="container h-100">
+                <div class="row align-items-center h-100">
+                  <div class="col-md-6 offset-md-6 text-center">
+                    <h3>1 Donante puede salvar hasta 4 vidas</h3>
+                    <h1>SUMATE</h1>
+                    <button class="btn">
+                      Registro de Donantes Voluntarios
+                    </button>
+                  </div>
+                </div>
+              </div>
+            
+            </div>
+          </div>
         </div>
-      </section>    
+      </section>
 
     </main>
-<!----------------Fin del Main---------------->
- <div class="container">
-       <section class="sumate">
-              
-             <h3>1 Donante puede salvar hasta 4 vidas</h3>
-             <h1>SUMATE</h1>
-             <button class="btn">Registro de Donantes Voluntarios</button>
-       </section>
-   </div>
+    <!----------------Fin del Main---------------->
+    <!------Suscripción a Newsletter--------------->
 
+    <section id="newsletter" class="mt-50 mb-3">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center text-uppercase">
+            <h2>--Newsletters--</h2>
+          </div>
+        </div>
 
+        <div class="row">
+          <div class="col text-center">
+            <span
+              >Regístrate y recibe información actualizada para convertirte en
+              donante o difundir campañas solidarias.</span
+            >
+          </div>
+        </div>
 
- <!-- Optional JavaScript -->
+        <div class="row">
+          <div
+            class="col col-md-10 offset-md-3 col-lg-8 offset-lg-4 text-center"
+          >
+            <!--<form onsubmit="registrar(event)" id="form">-->
+              <form  id="form">
+              <div class="row">
+                <div class="form-group col-12 col-md-6">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nombre"
+                    placeholder="Nombre y Apellido"
+                  />
+                  <p class="warning1" id="warning1"></p>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="form-group col-12 col-md-6">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="Ingrese su mail"
+                  />
+                  <small class="form-text text-muted"
+                    >*Tus datos personales serán resguardados</small
+                  >
+                  <p class="warning2" id="warning2"></p>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="form-group col-12 col-md-6">
+                  <button type="submit" class="btn btn-rolling btn-block">
+                    Enviar
+                  </button>
+                  <p class="warnings" id="warnings"></p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fin Newsletter-->
+
+    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-  
-</body>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
 
+    <script src="irarriba.js"></script>
+    <script src="letter.js"></script>
+  </body>
 </html>
