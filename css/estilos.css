@@ -159,12 +159,13 @@ nav ul li a {
 }
 
 @media (max-width: 767.98px) {
-  #sumate {
+  #sumate{
     color: rgba(19, 17, 17, 0.884);
-    margin-top: 20px;
+    margin-top: 5px;
     margin-left: auto;
+    margin-bottom: 300px;
   }
-  #newsletter {
+  #tarjetas{
     margin-top: 300px;
   }
 }
