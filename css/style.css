@@ -1,4 +1,4 @@
-.modal-content {
+body {
   background: #c31432; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
@@ -17,6 +17,5 @@
 }
 
 .registrarme {
- color:
-  #c31432;
+  color: #c31432;
 }
