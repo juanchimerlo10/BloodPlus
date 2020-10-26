@@ -3,12 +3,25 @@ html {
   padding: 0;
   scroll-behavior: smooth;
 }
-
+.modal-content {
+  background: #c31432; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #240b36,
+    #c31432
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #240b36,
+    #c31432
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: white;
+}
 #header {
   background-color: rgba(0, 0, 0, 0.5);
 }
 nav {
-   z-index: 1; 
+  z-index: 1;
 }
 
 /*--Botones Iniciar sesión y Contacto*/
@@ -159,13 +172,13 @@ nav ul li a {
 }
 
 @media (max-width: 767.98px) {
-  #sumate{
+  #sumate {
     color: rgba(19, 17, 17, 0.884);
     margin-top: 5px;
     margin-left: auto;
     margin-bottom: 300px;
   }
-  #tarjetas{
+  #tarjetas {
     margin-top: 300px;
   }
 }
