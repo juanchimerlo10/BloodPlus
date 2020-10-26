@@ -67,6 +67,10 @@ form.addEventListener("submit", e => {
         warning += `Numero invalido!<br>`
         entrar = true
     }
+    if (grupo.value == 1) {
+        warning += `Grupo invalido!<br>`
+        entrar = true
+    }
     if (!factor) {
         entrar = true
         warning += `Factor invalido`
