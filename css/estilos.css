@@ -183,6 +183,10 @@ nav ul li a {
   }
 }
 /*----------------*/
+#informate{
+  margin-top: 5%;
+  margin-bottom: 10%;
+}
 /* Inicio cards Avisos */
 #avisos .container .card-header{
   letter-spacing: 2px;
