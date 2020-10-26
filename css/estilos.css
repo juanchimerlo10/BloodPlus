@@ -8,7 +8,7 @@ html {
   background-color: rgba(0, 0, 0, 0.5);
 }
 nav {
-  /* z-index: 1; */
+   z-index: 1; 
 }
 
 /*--Botones Iniciar sesión y Contacto*/
