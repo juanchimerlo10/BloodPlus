@@ -1,4 +1,5 @@
-let registrados = []
+
+let registrados = JSON.parse(localStorage.getItem("registrados")) || []
 
 class Persona {
     constructor(nombre, apellido, email, celular, grupo, factor) {
@@ -67,17 +68,12 @@ form.addEventListener("submit", e => {
         warning += `Numero invalido!<br>`
         entrar = true
     }
-    if (grupo.value == 1) {
-        warning += `Grupo invalido!<br>`
-        entrar = true
-    }
     if (!factor) {
         entrar = true
         warning += `Factor invalido`
     } if (entrar) {
         parrafo.innerHTML = warning
     } else {
-
         let persona = new Persona(
             nombre.value,
             apellido.value,
@@ -92,11 +88,11 @@ form.addEventListener("submit", e => {
         apellido.value = ''
         email.value = ''
         celular.value = ''
-        factor.value = ''
+
+        grupo.value = 1
 
         localStorage.setItem('registrados', JSON.stringify(registrados))
-
-        alert("Formulario enviado!")
+        alert("Registro enviado!")
         location.replace("principal.html")
     }
 
