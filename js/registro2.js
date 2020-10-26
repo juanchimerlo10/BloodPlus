@@ -45,6 +45,7 @@ negativo.addEventListener("click", function () {
 })
 
 
+
 //Registro
 form.addEventListener("submit", e => {
     e.preventDefault()
@@ -52,12 +53,18 @@ form.addEventListener("submit", e => {
     let warning = ""
     let entrar = false
     let regexEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+    for (let i in registrados) {
+        if (registrados[i].email == email.value) {
+            alert("Email existente")
+            return
+        }
+    }
     if (nombre.value.length < 4) {
         warning += `Nombre invalido! <br>`
         entrar = true
     }
     if (apellido.value.length < 4) {
-        warning += `Nombre invalido! <br>`
+        warning += `Apellido invalido! <br>`
         entrar = true
     }
     if (!regexEmail.test(email.value)) {
@@ -74,6 +81,13 @@ form.addEventListener("submit", e => {
     } if (entrar) {
         parrafo.innerHTML = warning
     } else {
+        // for (let i in registrados) {
+        //     if (registrados[i].email == email) {
+        //         console.log("Encontrado")
+        //         return
+        //     }
+        // }
+
         let persona = new Persona(
             nombre.value,
             apellido.value,
@@ -92,10 +106,11 @@ form.addEventListener("submit", e => {
         grupo.value = 1
 
         localStorage.setItem('registrados', JSON.stringify(registrados))
+
         alert("Registro enviado!")
         location.replace("principal.html")
-    }
 
+    }
 })
 
 
