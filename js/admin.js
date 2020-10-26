@@ -39,9 +39,31 @@ const logueoChange = () => {
     if (usuario === "" || password === "") {
         return alert("Debe ingresar valores en los campos")
     }
-}
+    if (dato.nombre === usuario) {
+        if (dato.password === password) {
+            login = true
+            loguear()
+            localStorage.setItem("auth", "true")
+            window.location = "admin.html"
+        } else {
+            alert("Usuario o contraseña incorrectos")
+        }
+    } else {
+        alert("Usuario o contraseña incorrectos")
+    }
+    document.getElementById("user").value = ""
+    document.getElementById("password").value = ""
 
-let btnInicio = `<button 
+    const desloguear = () => {
+        login = false
+        alert("Has sido deslogueado")
+        localStorage.setItem("auth", "false")
+        loguear()
+        window.location = "pricipal.html"
+    }
+
+
+    let btnInicio = `<button 
             id="botonLogin"
             class="btn btn-outline-secondary"
             type="button"
@@ -50,7 +72,7 @@ let btnInicio = `<button
             >
             Iniciar Sesion
             </button>`;
-let btnCerrar = `<button 
+    let btnCerrar = `<button 
             id="botonSalir"
             class="btn btn-outline-secondary"
             type="button"
@@ -58,5 +80,5 @@ let btnCerrar = `<button
             >
             Cerrar Sesion
             </button>`;
-loguear();
-validation(login)
+    loguear();
+    validation(login)
