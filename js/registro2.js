@@ -108,7 +108,7 @@ form.addEventListener("submit", e => {
         localStorage.setItem('registrados', JSON.stringify(registrados))
 
         alert("Registro enviado!")
-        location.replace("principal.html")
+        location.replace("index.html")
 
     }
 })
